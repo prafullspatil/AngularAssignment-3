@@ -6,13 +6,14 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FooterComponent } from './include/footer/footer.component';
 import { HeaderComponent } from './include/header/header.component';
-import { EarringComponent } from './Components/earring/earring.component';
-import { RingComponent } from './Components/ring/ring.component';
-import { NecklaceComponent } from './Components/necklace/necklace.component';
-import { BraceletComponent } from './Components/bracelet/bracelet.component';
-import { CartComponent } from './Components/cart/cart.component';
-import { FilterPipe } from './Shared/filter.pipe';
-import { WishlistComponent } from './Components/wishlist/wishlist.component';
+import { EarringComponent } from './components/earring/earring.component';
+import { RingComponent } from './components/ring/ring.component';
+import { NecklaceComponent } from './components/necklace/necklace.component';
+import { BraceletComponent } from './components/bracelet/bracelet.component';
+import { CartComponent } from './components/cart/cart.component';
+import { FilterPipe } from './shared/filter.pipe';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 
 
@@ -28,7 +29,8 @@ import { WishlistComponent } from './Components/wishlist/wishlist.component';
     BraceletComponent,
     CartComponent,
     FilterPipe,
-    WishlistComponent
+    WishlistComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

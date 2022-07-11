@@ -27,7 +27,7 @@
                     <i class="fas fa-minus"></i>
                   </button>
   
-                  <input id="form1" min="0" name="quantity" value="2" type="number"
+                  <input id="form1" min="0" name="quantity" value="{{totalItem}}" type="number"
                     class="form-control form-control-sm" />
   
                   <button class="btn btn-link px-2"
@@ -39,7 +39,8 @@
                   <h5 class="mb-0">{{cartItem.price | currency: "INR"}}</h5>
                 </div>
                 <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                  <a href="#!" class="text-danger" (click)="removeItem(cartItem)"><i class="fas fa-trash fa-lg"></i></a>
+                  <a  class="text" style="color:green" (click)="addToCart(cartItem)" ><i class="fas fa-shopping-cart fa-lg mr-3"></i></a>
+                  <a href="#!" class="text-danger" (click)="removeItem(cartItem)"><i class="fas fa-trash fa-lg mt-2 ml-2"></i></a>
                 </div>
               </div>
             </div>

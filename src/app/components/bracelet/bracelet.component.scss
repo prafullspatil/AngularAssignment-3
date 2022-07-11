@@ -13,16 +13,31 @@ body {
   min-height: 100vh;
   background: #212121;
 }
-
+.row{
+  margin: 30px;;
+}
 .card {
   position: relative;
   width: 300px;
-  height: 540px;
-  margin: 25px;
+  height: 500px;
+  margin: 50px;
   background: $mypink;
+  // border: 3px solid;
+  // border-image: linear-gradient(
+  //   $mypink,black,$mywhite) 1;
+  //   animation: rotate 2.5s ease-in infinite;
+  
   border-radius: 10px;
   overflow: hidden;
 }
+
+// @keyframes rotate{
+//   50%{
+//     border-image: linear-gradient(
+//       360deg,yellow,yellow,$mypink) 1;
+    
+//   }
+// }
 
 .card::before {
   content: "";
@@ -41,7 +56,7 @@ body {
 }
 
 .card::after {
-//   content: "BIBA";
+  // content: "BIBA";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -84,22 +99,20 @@ body {
 .card .contentBox h3 {
   font-size: 18px;
   color: white;
-  text-align: center;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 1.5em;
   height: 3em;
   overflow: hidden;
+  text-align: center;
 }
 
 .card .contentBox .price {
-    margin-top: 3px;;
-  font-size: 22px;
+  font-size: 24px;
   color: white;
   font-weight: 700;
   letter-spacing: 1px;
-  
 }
 
 .card .contentBox .buy {
@@ -107,7 +120,7 @@ body {
   top: 100px;
   opacity: 0;
   padding: 10px 30px;
-  margin-top: 10px;
+  margin-top: 15px;
   color: #000000;
   text-decoration: none;
   background: white;
@@ -115,16 +128,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: 0.5s;
-  border:none;
 }
-// .button{
-//     display: flex;;
-// }
-// .favorite-icon{
-//     background-color: ;
-    
-//     border: none;
-// }
 
 .card:hover .contentBox .buy {
   top: 0;
@@ -135,3 +139,31 @@ body {
   height: 300px;
   width: auto;
 }
+
+
+
+.heading{
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }

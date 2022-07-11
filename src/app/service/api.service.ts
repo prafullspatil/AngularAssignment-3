@@ -1,5 +1,6 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,12 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
 
-  getAllProduct(){
-    return this.http.get(this.url);
+  getAllProduct():Observable<any>{
+    return this.http.get<any>(this.url);
    }
+
+   getProductById(id : number) {
+    return this.http.get(`${this.url}/${id}`);
+
+  }
 }

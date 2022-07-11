@@ -29,7 +29,7 @@
                     <i class="fas fa-minus"></i>
                   </button>
   
-                  <input id="form1" min="0" name="quantity" value="2" type="number"
+                  <input id="form1" min="0" name="quantity" value="{{totalItem}}" type="number"
                     class="form-control form-control-sm" />
   
                   <button class="btn btn-link px-2"
@@ -70,16 +70,32 @@
 
 
 
-  <!-- <section *ngIf="product.length ==0">
-    <div class="container">
-      <div class="card">
-          <h5 class="card-title">My Cart</h5>
+  <section *ngIf="product.length === 0">
+    <div class="container-fluid  mt-100 shadow" >
+      <div class="row">
+      
+       <div class="col-md-12">
+       
+           <div class="card emptycard">
+         <div class="card-header emptycard-header">
+          <h1 class="heading">Cart</h1>
+         </div>
+         <div class="card-body cart">
+             <div class="col-sm-12 empty-cart-cls text-center">
+               <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid mb-4 mr-3">
+               <h3><strong>Your Cart is Empty</strong></h3>
+               <h4>Add something to make me happy :)</h4>
+               <a href="#" class="btn btn-primary cart-btn-transform m-3" routerLink="/home" data-abc="true">Continue Shopping</a>
+               
+             
+             </div>
+         </div>
+     </div>
+         
+       
+       </div>
+      
       </div>
-      <div class="center">
-          <img src="/src/assets/image/cart.jpg" alt="">
-          <h4>Your cart is empty!</h4>
-          <h6>Add item to it now</h6>
-          <button routerLink="/products" class="btn btn-primary">Shop Now</button>
-      </div>
-  </div>
-  </section> -->
+     
+     </div>
+  </section>
