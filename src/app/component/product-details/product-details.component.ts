@@ -23,7 +23,7 @@ export class ProductDetailsComponent implements OnInit {
     });
   }
   addToCart(product : any) {
-    // alert('product added to Cart ');
+    alert('product added to Cart ');
     this.cartService.addToCart(product);
     console.log(product);
   }

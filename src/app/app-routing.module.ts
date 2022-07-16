@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BraceletComponent } from './components/bracelet/bracelet.component';
-import { CartComponent } from './components/cart/cart.component';
-import { EarringComponent } from './components/earring/earring.component';
-import { NecklaceComponent } from './components/necklace/necklace.component';
-import { ProductDetailsComponent } from './components/product-details/product-details.component';
-import { RingComponent } from './components/ring/ring.component';
-import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { BraceletComponent } from './component/bracelet/bracelet.component';
+import { CartComponent } from './component/cart/cart.component';
+import { EarringComponent } from './component/earring/earring.component';
+import { NecklaceComponent } from './component/necklace/necklace.component';
+import { ProductDetailsComponent } from './component/product-details/product-details.component';
+import { RingComponent } from './component/ring/ring.component';
+import { WishlistComponent } from './component/wishlist/wishlist.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 

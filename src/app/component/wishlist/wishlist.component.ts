@@ -19,6 +19,7 @@ export class WishlistComponent implements OnInit {
       this.product=res;
       this.grandTotal=this.wishList.getTotalPrice();
     })
+    
   }
 
   removeItem(item:any){

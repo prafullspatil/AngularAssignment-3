@@ -1,3 +1,5 @@
+
+
 <br><br>
 <section *ngIf=" product.length != 0" class="h-100" style="background-color: #eee;">
     <div class="container h-100 py-5">
@@ -5,7 +7,7 @@
         <div class="col-10">
   
           <div class="d-flex justify-content-between align-items-center mb-4">
-            <h3 class="fw-normal mb-0 text-black">WishList</h3>
+            <h3 class="fw-normal mb-0 text-black">Shopping Cart</h3>
            
           </div>
           <ng-container *ngFor="let cartItem of product">
@@ -31,7 +33,7 @@
                     class="form-control form-control-sm" />
   
                   <button class="btn btn-link px-2"
-                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                    onclick="this.parentNode.querySelector('input[type= number]').stepUp()">
                     <i class="fas fa-plus"></i>
                   </button>
                 </div>
@@ -39,15 +41,61 @@
                   <h5 class="mb-0">{{cartItem.price | currency: "INR"}}</h5>
                 </div>
                 <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                  <a  class="text" style="color:green" (click)="addToCart(cartItem)" ><i class="fas fa-shopping-cart fa-lg mr-3"></i></a>
-                  <a href="#!" class="text-danger" (click)="removeItem(cartItem)"><i class="fas fa-trash fa-lg mt-2 ml-2"></i></a>
+                  <a href="#!" class="text-danger" (click)="removeItem(cartItem)"><i class="fas fa-trash fa-lg"></i></a>
                 </div>
               </div>
             </div>
           </div>        
         </ng-container>
-          
+          <div class="card mb-4">
+            <div class="card-body p-4 d-flex flex-row">
+              <div class="form-outline flex-fill"><label class="form-label" for="form1">Discound code</label>
+                <input type="text" id="form1" class="form-control form-control-lg" />
+                
+              </div>
+              <button type="button" class="btn btn-outline-warning ml-2 ">Apply</button>
+            </div>
+          </div>
+  
+          <div class="card">
+            <div class="card-body">
+              <button type="button" class="btn btn-warning btn-block btn-lg">Proceed to Pay</button>
+            </div>
+          </div>
+       
         </div>
       </div>
     </div>
+  </section>
+
+
+
+  <section *ngIf="product.length === 0">
+    <div class="container-fluid  mt-100 shadow" >
+      <div class="row">
+      
+       <div class="col-md-12">
+       
+           <div class="card emptycard">
+         <div class="card-header emptycard-header">
+          <h1 class="heading">Cart</h1>
+         </div>
+         <div class="card-body cart">
+             <div class="col-sm-12 empty-cart-cls text-center">
+               <img src="https://cdni.iconscout.com/illustration/premium/thumb/confusing-woman-due-to-empty-cart-4558760-3780056.png" width="230" height="130" class="img-fluid mb-4 mr-3">
+               <h3><strong>Your Cart is Empty</strong></h3>
+               <h4>Add something to make me happy :)</h4>
+               <a href="#" class="btn btn-primary cart-btn-transform m-3" routerLink="/home" data-abc="true">Continue Shopping</a>
+               
+             
+             </div>
+         </div>
+     </div>
+         
+       
+       </div>
+      
+      </div>
+     
+     </div>
   </section>

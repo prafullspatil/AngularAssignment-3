@@ -14,7 +14,7 @@
           <div class="contentBox">
             <h3>{{ product.product_name }}</h3>
             <h2 class="price">{{ product.price | currency: "INR" }}</h2>
-            <a (click)="addToCart(product)" class="buy button" style="font-size:15px;">Add To Cart</a>
+            <a (click)="addToCart(product)" class="buy button" style="font-size:15px;cursor:pointer">Add To Cart</a>
             <a href="#" class="buy button mt-5">Add To Cart</a>
           </div>
         
